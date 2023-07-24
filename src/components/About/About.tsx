@@ -16,19 +16,28 @@ export const About = () => {
           xs={12}
           sm={4}
           container
-          justifyContent="center"
-          marginBottom="2em"
+          sx={{
+            justifyContent: "center",
+          }}
         >
           <ProfilePicture />
         </Grid>
-        <Grid xs={12} sm={8}>
+        <Grid
+          xs={12}
+          sm={8}
+          sx={{
+            display: { sm: "flex" },
+            alignItems: { sm: "center" },
+          }}
+        >
           <Typography
             variant="body1"
             color={"white"}
             fontSize={FontSize.h1}
             fontWeight="bold"
-            marginBottom="1em"
-            sx={{ textAlign: { xs: "center", sm: "left" } }}
+            sx={{
+              textAlign: { xs: "center", sm: "left" },
+            }}
           >
             Lorenzo Cermeno
           </Typography>
@@ -39,6 +48,7 @@ export const About = () => {
             color={"white"}
             fontSize={FontSize.h2}
             fontWeight="bold"
+            marginTop="1em"
           >
             About
             <Typography variant="body1" color={"white"} fontSize={FontSize.p}>

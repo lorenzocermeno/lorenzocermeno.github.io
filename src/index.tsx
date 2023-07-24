@@ -25,8 +25,8 @@ root.render(
         <Box
           sx={{
             bgcolor: "#0d0d0d",
-            height: { xs: "32em", sm: "28em" },
-            padding: "4em 2em",
+            height: { xs: "34em", sm: "30em" },
+            padding: "4em 2em 1em 4em",
             borderRadius: "1em",
           }}
         >
