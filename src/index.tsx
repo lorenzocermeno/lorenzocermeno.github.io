@@ -31,9 +31,9 @@ root.render(
             minWidth: "260px",
           }}
         >
-          <About />
+          {/* <About />
           <Projects />
-          <Links />
+          <Links /> */}
         </Box>
       </Container>
     </StyledDiv>
