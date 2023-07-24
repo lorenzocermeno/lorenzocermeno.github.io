@@ -28,6 +28,7 @@ root.render(
             height: { xs: "34em", sm: "30em" },
             padding: "4em 2em 1em 2em",
             borderRadius: "1em",
+            minWidth: "260px",
           }}
         >
           <About />
