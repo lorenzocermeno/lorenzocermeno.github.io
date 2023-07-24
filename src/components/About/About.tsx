@@ -11,30 +11,34 @@ const StyledSection = styled.section`
 export const About = () => {
   return (
     <StyledSection>
-      <Grid container spacing={4}>
-        <Grid xs={8}>
+      <Grid container spacing={4} sx={{ paddingLeft: "2em" }}>
+        <Grid
+          xs={12}
+          sm={4}
+          container
+          justifyContent="center"
+          marginBottom="2em"
+        >
+          <ProfilePicture />
+        </Grid>
+        <Grid xs={12} sm={8}>
           <Typography
             variant="body1"
             color={"white"}
             fontSize={FontSize.h1}
-            textAlign="left"
             fontWeight="bold"
-            paddingLeft={4} // Find a way to remove
+            marginBottom="1em"
+            sx={{ textAlign: { xs: "center", sm: "left" } }}
           >
             Lorenzo Cermeno
           </Typography>
         </Grid>
-        <Grid xs={4} container justifyContent="center">
-          <ProfilePicture />
-        </Grid>
-        <Grid xs={8}>
+        <Grid xs={12}>
           <Typography
             variant="h2"
             color={"white"}
             fontSize={FontSize.h2}
-            textAlign="left"
             fontWeight="bold"
-            paddingLeft={4} // Find a way to remove
           >
             About
             <Typography variant="body1" color={"white"} fontSize={FontSize.p}>

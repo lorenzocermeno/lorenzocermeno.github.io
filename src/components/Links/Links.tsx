@@ -4,14 +4,14 @@ import linkedInLogo from "../../images/linkedIn.svg";
 import { Link } from "./Link/Link";
 import styled from "@emotion/styled";
 
-const StyledSection = styled.section`
+const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-around;
 `;
 
 export const Links = () => {
   return (
-    <StyledSection>
+    <StyledFooter>
       <Link
         href="https://github.com/lorenzocermeno"
         id="GitHub"
@@ -27,6 +27,6 @@ export const Links = () => {
         id="LinkedIn"
         src={linkedInLogo}
       />
-    </StyledSection>
+    </StyledFooter>
   );
 };
