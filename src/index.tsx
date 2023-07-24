@@ -24,9 +24,9 @@ root.render(
       <Container maxWidth="sm">
         <Box
           sx={{
-            bgcolor: "#0d0d0d",
+            bgcolor: "#141414",
             height: { xs: "34em", sm: "30em" },
-            padding: "4em 2em 1em 4em",
+            padding: "4em 2em 1em 2em",
             borderRadius: "1em",
           }}
         >

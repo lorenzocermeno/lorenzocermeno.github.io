@@ -27,6 +27,7 @@ const SHOE_CONVERTER: IProject = {
 
 const StyledSection = styled.section`
   margin-bottom: 2em;
+  height: 50%;
 `;
 
 const StyledSpan = styled.span`
@@ -61,7 +62,7 @@ export const Projects = (): JSX.Element => {
           expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
           aria-controls={`${SHOE_CONVERTER.ID}-content`}
           id={SHOE_CONVERTER.ID}
-          sx={{ backgroundColor: "#000000e6" }}
+          sx={{ backgroundColor: "#212121" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={8}>
@@ -79,7 +80,7 @@ export const Projects = (): JSX.Element => {
             </Grid>
           </Grid>
         </AccordionSummary>
-        <AccordionDetails sx={{ backgroundColor: "#000000e6" }}>
+        <AccordionDetails sx={{ backgroundColor: "#212121" }}>
           <Typography
             variant="body1"
             fontSize={FontSize.p}
