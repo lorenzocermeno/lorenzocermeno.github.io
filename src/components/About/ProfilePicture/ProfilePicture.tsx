@@ -2,7 +2,9 @@ import profilePicture from "../../../images/profile-picture.jpg";
 import styled from "@emotion/styled";
 
 const StyledImg = styled.img`
-  width: 4em;
+  display: flex;
+  justify-content: center;
+  width: 5em;
   border-radius: 5em;
 `;
 

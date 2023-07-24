@@ -1,6 +1,6 @@
-import githubLogo from "../../images/github.svg";
-import npmLogo from "../../images/npm-2.svg";
-import linkedInLogo from "../../images/social-linkedin.svg";
+import githubLogo from "../../images/gitHub.svg";
+import npmLogo from "../../images/npm.svg";
+import linkedInLogo from "../../images/linkedIn.svg";
 import { Link } from "./Link/Link";
 import styled from "@emotion/styled";
 
@@ -12,9 +12,21 @@ const StyledSection = styled.section`
 export const Links = () => {
   return (
     <StyledSection>
-      <Link href="https://www.github.com" id="GitHub" src={githubLogo} />
-      <Link href="https://www.npm.com" id="npm" src={npmLogo} />
-      <Link href="https://www.linkedin.com" id="LinkedIn" src={linkedInLogo} />
+      <Link
+        href="https://github.com/lorenzocermeno"
+        id="GitHub"
+        src={githubLogo}
+      />
+      <Link
+        href="https://www.npmjs.com/~lorenzocermeno"
+        id="npm"
+        src={npmLogo}
+      />
+      <Link
+        href="https://www.linkedin.com/in/lorenzo-cermeno/"
+        id="LinkedIn"
+        src={linkedInLogo}
+      />
     </StyledSection>
   );
 };

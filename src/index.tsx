@@ -1,15 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { About } from "./components/About/About";
+import { Links } from "./components/Links/Links";
+import { Projects } from "./components/Projects";
+import styled from "@emotion/styled";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+
+const StyledDiv = styled.div`
+  background-color: black;
+  margin-top: 4em;
+`;
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <StyledDiv>
+      <Container maxWidth="sm">
+        <Box
+          sx={{
+            bgcolor: "#0d0d0d",
+            height: "50vh",
+            padding: "4em 2em",
+            borderRadius: "1em",
+          }}
+        >
+          <About />
+          <Projects />
+          <Links />
+        </Box>
+      </Container>
+    </StyledDiv>
   </React.StrictMode>
 );
 
