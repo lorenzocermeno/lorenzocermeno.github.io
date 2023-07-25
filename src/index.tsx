@@ -8,6 +8,7 @@ import { Projects } from "./components/Projects";
 import styled from "@emotion/styled";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import { Experience } from "./components/Experience/Experience";
 
 const StyledDiv = styled.div`
   background-color: black;
@@ -21,7 +22,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <StyledDiv>
-      <Container maxWidth="sm">
+      <Container sx={{ maxWidth: "800px" }}>
         <Box
           sx={{
             bgcolor: "#141414",
@@ -32,6 +33,7 @@ root.render(
           }}
         >
           {/* <About />
+          <Experience />
           <Projects />
           <Links /> */}
         </Box>
