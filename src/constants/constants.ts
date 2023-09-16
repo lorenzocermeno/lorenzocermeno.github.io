@@ -1,6 +1,6 @@
 export enum FontSize {
-  h1 = 30,
-  h2 = 22,
-  h3 = 18,
+  h1 = 42,
+  h2 = 28,
+  h3 = 22,
   p = 16,
 }

@@ -1,12 +1,12 @@
-import profilePicture from "../../../images/profile-picture.jpg";
+import profilePicture from "../../../images/profile-pic.jpg";
 import styled from "@emotion/styled";
 
 const StyledImg = styled.img`
   display: flex;
   justify-content: center;
-  width: 5em;
+  width: 8em;
   min-width: 4em;
-  border-radius: 5em;
+  border-radius: 50%;
 `;
 
 export const ProfilePicture = () => {

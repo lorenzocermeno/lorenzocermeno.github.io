@@ -3,31 +3,32 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Link } from "./Links/Link/Link";
-import gitHubLogo from "../images/gitHub.svg";
-import npmLogo from "../images/npm.svg";
-import typeScriptLogo from "../images/typescript.svg";
-import jestLogo from "../images/jest.svg";
+import { Link } from "../Footer/Link/Link";
+import githubLogoDarkMode from "../../images/github-dark-mode.svg";
+import githubLogoLightMode from "../../images/github-light-mode.svg";
+import npmLogo from "../../images/npm.svg";
+import typeScriptLogo from "../../images/typescript.svg";
+import jestLogo from "../../images/jest.svg";
 import Grid from "@mui/material/Grid";
 import styled from "@emotion/styled";
-import { FontSize } from "../constants/constants";
+import { FontSize } from "../../constants/constants";
 import Divider from "@mui/material/Divider";
+import { useTheme } from "@mui/material/styles";
 
 interface IProject {
-  ID: string;
-  TEXT: string;
-  TITLE: string;
+  id: string;
+  text: string;
+  title: string;
 }
 
 const SHOE_CONVERTER: IProject = {
-  ID: "shoe-converter",
-  TEXT: "Making it possible to convert the shoe size and gender of one brand to another.",
-  TITLE: "Shoe Converter",
+  id: "shoe-converter",
+  text: "Making it possible to convert the shoe size and gender of one brand to another.",
+  title: "Shoe Converter",
 } as const;
 
 const StyledSection = styled.section`
   margin-bottom: 2em;
-  height: 50%;
 `;
 
 const StyledSpan = styled.span`
@@ -46,11 +47,12 @@ const StyledDiv = styled.div`
 `;
 
 export const Projects = (): JSX.Element => {
+  const theme = useTheme();
   return (
     <StyledSection>
       <Typography
         variant="h2"
-        color={"white"}
+        color={"text.primary"}
         marginBottom={1}
         fontSize={FontSize.h2}
         fontWeight="bold"
@@ -59,15 +61,19 @@ export const Projects = (): JSX.Element => {
       </Typography>
       <Accordion>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
-          aria-controls={`${SHOE_CONVERTER.ID}-content`}
-          id={SHOE_CONVERTER.ID}
-          sx={{ backgroundColor: "#212121" }}
+          expandIcon={<ExpandMoreIcon sx={{ color: "text.primary" }} />}
+          aria-controls={`${SHOE_CONVERTER.id}-content`}
+          id={SHOE_CONVERTER.id}
+          sx={{ backgroundColor: "background.default" }}
         >
           <Grid container spacing={2}>
             <Grid item xs={8}>
-              <Typography variant="h3" fontSize={FontSize.h3} color="white">
-                {SHOE_CONVERTER.TITLE}
+              <Typography
+                variant="h3"
+                fontSize={FontSize.h3}
+                color="text.primary"
+              >
+                {SHOE_CONVERTER.title}
               </Typography>
             </Grid>
             <Grid
@@ -80,14 +86,14 @@ export const Projects = (): JSX.Element => {
             </Grid>
           </Grid>
         </AccordionSummary>
-        <AccordionDetails sx={{ backgroundColor: "#212121" }}>
+        <AccordionDetails sx={{ backgroundColor: "background.default" }}>
           <Typography
             variant="body1"
             fontSize={FontSize.p}
             marginBottom={2}
-            color="white"
+            color="text.primary"
           >
-            {SHOE_CONVERTER.TEXT}
+            {SHOE_CONVERTER.text}
           </Typography>
           <StyledDiv>
             <Divider variant="middle" sx={{ borderColor: "#414141" }} />
@@ -96,7 +102,11 @@ export const Projects = (): JSX.Element => {
             <Link
               href="https://github.com/lorenzocermeno/shoe-converter"
               id="GitHub"
-              src={gitHubLogo}
+              src={
+                theme.palette.mode === "dark"
+                  ? githubLogoDarkMode
+                  : githubLogoLightMode
+              }
             />
             <Link
               href="https://www.npmjs.com/package/shoe-converter"

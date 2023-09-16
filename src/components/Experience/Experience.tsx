@@ -1,77 +1,64 @@
-import Typography from "@mui/material/Typography";
+import { Typography } from "@mui/material";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
 import Grid from "@mui/material/Grid";
 import { FontSize } from "../../constants/constants";
 import styled from "@emotion/styled";
-import { ExperienceBase } from "./ExperienceBase/ExperienceBase";
+import { Work } from "./Work/Work";
+import { Education } from "./Education/Education";
+import { StyledSection } from "../StyledSection";
 
-const StyledSection = styled.section`
-  margin-bottom: 2em;
+const StyledSpan = styled.span`
+  display: flex;
 `;
 
-export const Experience = () => {
-  function education() {
-    return { duration: "2017-2020", title: "Stockholm University" };
-  }
+export const Experience = (): JSX.Element => {
   return (
     <StyledSection>
-      <Grid container spacing={4} sx={{ paddingLeft: "2em" }}>
-        <Grid container xs={12}>
-          <Typography
-            variant="h2"
-            color={"white"}
-            fontSize={FontSize.h2}
-            fontWeight="bold"
-            marginTop="1em"
-          >
-            Experience
-          </Typography>
-        </Grid>
-        <Grid
-          container
-          xs={12}
-          sm={6}
-          sx={
-            {
-              // justifyContent: "center",
-            }
-          }
+      <>
+        <Typography
+          fontWeight="bold"
+          color="text.primary"
+          fontSize={FontSize.h2}
+          variant="h2"
         >
-          <ExperienceBase
-            education={true}
-            heading="Education"
-            entries={[
-              {
-                duration: "2017-2020",
-                title: "Stockholm University",
-                body: "Placeholder",
-              },
-            ]}
-          />
+          Experience
+        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <StyledSpan>
+              <SchoolIcon
+                sx={{ color: "text.primary", marginRight: "0.5em" }}
+              />
+              <Typography
+                fontWeight="bold"
+                marginTop={"0.25em"}
+                color="text.primary"
+                fontSize={FontSize.h3}
+                variant="h3"
+              >
+                Education
+              </Typography>
+            </StyledSpan>
+            <Education />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <StyledSpan>
+              <WorkIcon sx={{ color: "text.primary", marginRight: "0.5em" }} />
+              <Typography
+                fontWeight="bold"
+                marginTop={"0.25em"}
+                color="text.primary"
+                fontSize={FontSize.h3}
+                variant="h3"
+              >
+                Work
+              </Typography>
+            </StyledSpan>
+            <Work />
+          </Grid>
         </Grid>
-        <Grid
-          container
-          xs={12}
-          sm={6}
-          sx={
-            {
-              // display: { sm: "flex" },
-              // alignItems: { sm: "center" },
-            }
-          }
-        >
-          <ExperienceBase
-            education={false}
-            heading="Work"
-            entries={[
-              {
-                duration: "2022- current",
-                title: "Job",
-                body: "Placeholder",
-              },
-            ]}
-          />
-        </Grid>
-      </Grid>
+      </>
     </StyledSection>
   );
 };
