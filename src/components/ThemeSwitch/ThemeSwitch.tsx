@@ -7,24 +7,22 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Typography from "@mui/material/Typography";
 import { FontSize } from "../../constants/constants";
 import styled from "@emotion/styled";
+import { useContext } from "react";
 
 const StyledSpan = styled.span`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 `;
 
 export const ThemeSwitch = (): JSX.Element => {
   const theme = useTheme();
-  const colorMode = React.useContext(ColorModeContext);
+  const colorMode = useContext(ColorModeContext);
+
   return (
     <StyledSpan>
-      <Typography variant="body1" color={"text.primary"} fontSize={FontSize.p}>
-        {theme.palette.mode} mode
-      </Typography>
       <IconButton
-        sx={{ ml: 1 }}
+        sx={{ ml: 1, color: theme.palette.mode === "dark" ? "white" : "black" }}
         onClick={colorMode.toggleColorMode}
-        color="inherit" //HERE!
       >
         {theme.palette.mode === "dark" ? (
           <Brightness4Icon />
