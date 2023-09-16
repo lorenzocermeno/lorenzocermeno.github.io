@@ -25,6 +25,7 @@ export const Header = (): JSX.Element => {
           sx={{
             display: { sm: "flex" },
             alignItems: { sm: "center" },
+            justifyContent: { sm: "center" },
           }}
         >
           <Typography
