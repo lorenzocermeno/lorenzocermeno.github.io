@@ -8,25 +8,25 @@ export const About = () => {
   return (
     <StyledSection>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={8}>
+        <Grid item xs={10} sm={8}>
           <Typography
             variant="h2"
             color={"text.primary"}
             fontSize={FontSize.h2}
             fontWeight="bold"
+            marginBottom={"0.25em"}
           >
             About
-            <Typography
-              variant="body1"
-              color={"text.primary"}
-              fontSize={FontSize.p}
-              marginTop={"0.25em"}
-            >
-              Developer from Stockholm 🇸🇪
-            </Typography>
+          </Typography>
+          <Typography
+            variant="body1"
+            color={"text.primary"}
+            fontSize={FontSize.p}
+          >
+            Developer from Stockholm 🇸🇪
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={2} sm={4}>
           <ThemeSwitch />
         </Grid>
       </Grid>

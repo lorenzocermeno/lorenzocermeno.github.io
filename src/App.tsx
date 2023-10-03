@@ -44,7 +44,7 @@ export const App = (): JSX.Element => {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <StyledDiv>
-          {/* <Container sx={{ width: { xs: "auto", sm: "46em" } }}>
+          <Container sx={{ width: { xs: "auto", sm: "46em" } }}>
             <Box
               sx={{
                 bgcolor: "background.default",
@@ -54,13 +54,13 @@ export const App = (): JSX.Element => {
                 minWidth: "260px",
               }}
             >
-              <Header />
+              {/* <Header />
               <About />
               <Experience />
               <Projects />
-              <Footer />
+              <Footer /> */}
             </Box>
-          </Container> */}
+          </Container>
         </StyledDiv>
       </ThemeProvider>
     </ColorModeContext.Provider>

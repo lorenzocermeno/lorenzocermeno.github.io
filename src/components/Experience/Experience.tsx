@@ -10,6 +10,7 @@ import { StyledSection } from "../StyledSection";
 
 const StyledSpan = styled.span`
   display: flex;
+  align-items: center;
 `;
 
 export const Experience = (): JSX.Element => {
@@ -21,6 +22,7 @@ export const Experience = (): JSX.Element => {
           color="text.primary"
           fontSize={FontSize.h2}
           variant="h2"
+          marginBottom={"0.25em"}
         >
           Experience
         </Typography>
@@ -32,7 +34,6 @@ export const Experience = (): JSX.Element => {
               />
               <Typography
                 fontWeight="bold"
-                marginTop={"0.25em"}
                 color="text.primary"
                 fontSize={FontSize.h3}
                 variant="h3"
@@ -47,7 +48,6 @@ export const Experience = (): JSX.Element => {
               <WorkIcon sx={{ color: "text.primary", marginRight: "0.5em" }} />
               <Typography
                 fontWeight="bold"
-                marginTop={"0.25em"}
                 color="text.primary"
                 fontSize={FontSize.h3}
                 variant="h3"
