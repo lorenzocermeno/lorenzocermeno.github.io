@@ -9,6 +9,7 @@ export const Header = (): JSX.Element => {
     <StyledSection>
       <Grid container spacing={4} sx={{ paddingLeft: "2em" }}>
         <Grid
+          item
           xs={12}
           sm={2}
           sx={{
@@ -20,6 +21,7 @@ export const Header = (): JSX.Element => {
           <ProfilePicture />
         </Grid>
         <Grid
+          item
           xs={12}
           sm={10}
           sx={{

@@ -3,12 +3,13 @@ import { FontSize } from "../../constants/constants";
 import Grid from "@mui/material/Grid";
 import { StyledSection } from "../StyledSection";
 import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
+import { LanguageSwitch } from "../LanguageSwitch/LanguageSwitch";
 
 export const About = () => {
   return (
     <StyledSection>
       <Grid container spacing={2}>
-        <Grid item xs={10} sm={8}>
+        <Grid item xs={8} sm={8}>
           <Typography
             variant="h2"
             color={"text.primary"}
@@ -26,7 +27,10 @@ export const About = () => {
             Developer from Stockholm 🇸🇪
           </Typography>
         </Grid>
-        <Grid item xs={2} sm={4}>
+        <Grid item xs={2} sm={2}>
+          <LanguageSwitch />
+        </Grid>
+        <Grid item xs={2} sm={2}>
           <ThemeSwitch />
         </Grid>
       </Grid>
