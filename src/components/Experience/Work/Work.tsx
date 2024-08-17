@@ -12,9 +12,10 @@ export const Work = (): JSX.Element => {
       >
         Handelsbanken <br />
         <Typography fontWeight={"regular"}>
-          2022 - current <br />
-          Software Developer <br />
-          Description...
+          Stockholm, 2022 - current <br />
+          Full Stack Developer <br />
+          Main responsibility within the bank's card internet services and
+          integration. Developing the website, internal systems and APIs.
         </Typography>
       </Typography>
       <Typography
@@ -25,9 +26,11 @@ export const Work = (): JSX.Element => {
       >
         Folksam <br />
         <Typography fontWeight={"regular"}>
-          2021 - 2022 <br />
+          Stockholm, 2021 - 2022 <br />
           DevOps Engineer <br />
-          Description...
+          Analyzing and developing the infrastructure for easier administration,
+          testing and deployment with a focus on CI/CD, leveraging automation
+          within the P&C domain.
         </Typography>
       </Typography>
       <Typography
@@ -38,9 +41,10 @@ export const Work = (): JSX.Element => {
       >
         Nexer Tech Talent @ Folksam <br />
         <Typography fontWeight={"regular"}>
-          2020 - 2021 <br />
+          Stockholm, 2020 - 2021 <br />
           Junior DevOps Engineer <br />
-          Description...
+          Trainee programme within the P&C domain, working and attending related
+          educational courses in parallel.
         </Typography>
       </Typography>
     </>

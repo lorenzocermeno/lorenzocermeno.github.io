@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <StyledSection>
       <Grid container spacing={2}>
-        <Grid item xs={8} sm={8}>
+        <Grid item xs={8}>
           <Typography
             variant="h2"
             color={"text.primary"}
@@ -24,13 +24,13 @@ export const About = () => {
             color={"text.primary"}
             fontSize={FontSize.p}
           >
-            Developer from Stockholm 🇸🇪
+            Fullstack developer from Stockholm 🇸🇪
           </Typography>
         </Grid>
-        <Grid item xs={2} sm={2}>
+        <Grid item xs={2}>
           <LanguageSwitch />
         </Grid>
-        <Grid item xs={2} sm={2}>
+        <Grid item xs={2}>
           <ThemeSwitch />
         </Grid>
       </Grid>

@@ -16,17 +16,17 @@ export const ThemeSwitch = (): JSX.Element => {
   const colorMode = useContext(ColorModeContext);
 
   return (
-    <StyledSpan>
-      <IconButton
-        sx={{ ml: 1, color: theme.palette.mode === "dark" ? "white" : "black" }}
-        onClick={colorMode.toggleColorMode}
-      >
-        {theme.palette.mode === "dark" ? (
-          <Brightness4Icon />
-        ) : (
-          <Brightness7Icon />
-        )}
-      </IconButton>
-    </StyledSpan>
+    // <StyledSpan>
+    <IconButton
+      sx={{ color: theme.palette.mode === "dark" ? "white" : "black" }}
+      onClick={colorMode.toggleColorMode}
+    >
+      {theme.palette.mode === "dark" ? (
+        <Brightness4Icon />
+      ) : (
+        <Brightness7Icon />
+      )}
+    </IconButton>
+    // {/* </StyledSpan> */}
   );
 };

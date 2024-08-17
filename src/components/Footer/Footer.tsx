@@ -26,11 +26,6 @@ export const Footer = () => {
         }
       />
       <Link
-        href="https://www.npmjs.com/~lorenzocermeno"
-        id="npm"
-        src={npmLogo}
-      />
-      <Link
         href="https://www.linkedin.com/in/lorenzo-cermeno/"
         id="LinkedIn"
         src={

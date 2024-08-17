@@ -5,6 +5,7 @@ import githubLogoLightMode from "../../images/github-light-mode.svg";
 import npmLogo from "../../images/npm.svg";
 import typeScriptLogo from "../../images/typescript.svg";
 import jestLogo from "../../images/jest.svg";
+import rustLogo from "../../images/rust.svg";
 import styled from "@emotion/styled";
 import { FontSize } from "../../constants/constants";
 import { useTheme } from "@mui/material/styles";
@@ -75,9 +76,32 @@ export const Projects = (): JSX.Element => {
         }
       />
       <Project
+        id={"cli-point-of-sale-app"}
+        text={
+          "Incredibly simple application, made with the purpose of familiarizing myself with Rust."
+        }
+        title={"CLI Point of Sale Application"}
+        imageRow={
+          <>
+            <StyledImg src={rustLogo} alt="Rust logo" />
+          </>
+        }
+        footer={
+          <Link
+            href="about:blank"
+            id="GitHub"
+            src={
+              theme.palette.mode === "dark"
+                ? githubLogoDarkMode
+                : githubLogoLightMode
+            }
+          />
+        }
+      />
+      <Project
         id={"todo-list"}
-        text={"A simple todo list app"}
-        title={"Todo List"}
+        text={"A fullstack todo list application."}
+        title={"Todo List [Work in progress]"}
         imageRow={
           <>
             <StyledImg src={reactLogo} alt="React logo" />

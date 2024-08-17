@@ -29,6 +29,20 @@ export const Experience = (): JSX.Element => {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
             <StyledSpan>
+              <WorkIcon sx={{ color: "text.primary", marginRight: "0.5em" }} />
+              <Typography
+                fontWeight="bold"
+                color="text.primary"
+                fontSize={FontSize.h3}
+                variant="h3"
+              >
+                Work
+              </Typography>
+            </StyledSpan>
+            <Work />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <StyledSpan>
               <SchoolIcon
                 sx={{ color: "text.primary", marginRight: "0.5em" }}
               />
@@ -42,20 +56,6 @@ export const Experience = (): JSX.Element => {
               </Typography>
             </StyledSpan>
             <Education />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <StyledSpan>
-              <WorkIcon sx={{ color: "text.primary", marginRight: "0.5em" }} />
-              <Typography
-                fontWeight="bold"
-                color="text.primary"
-                fontSize={FontSize.h3}
-                variant="h3"
-              >
-                Work
-              </Typography>
-            </StyledSpan>
-            <Work />
           </Grid>
         </Grid>
       </>

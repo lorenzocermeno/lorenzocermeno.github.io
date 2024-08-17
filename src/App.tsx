@@ -10,6 +10,7 @@ import { useMemo, useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { ColorModeContext } from "./context/context";
 import { PaletteMode, useMediaQuery } from "@mui/material";
+import { Stack } from "./components/Stack/Stack";
 
 const StyledDiv = styled.div`
   background-color: black;
@@ -57,8 +58,9 @@ export const App = (): JSX.Element => {
               {/* <Header />
               <About />
               <Experience />
+              <Stack />
               <Projects />
-              <Footer /> */}
+              <Footer />*/}
             </Box>
           </Container>
         </StyledDiv>

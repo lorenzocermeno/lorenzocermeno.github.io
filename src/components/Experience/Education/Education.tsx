@@ -12,7 +12,7 @@ export const Education = (): JSX.Element => {
       >
         Stockholm University <br />
         <Typography fontWeight={"regular"}>
-          2017 - 2022 <br />
+          Stockholm, 2017 - 2020 <br />
           B.Sc., Computer and Systems Science <br />
         </Typography>
       </Typography>
@@ -24,7 +24,7 @@ export const Education = (): JSX.Element => {
       >
         Uppsala University <br />
         <Typography fontWeight={"regular"}>
-          2017 - 2018 <br />
+          Uppsala, 2015 - 2016 <br />
           Course, Media and Communications Science <br />
         </Typography>
       </Typography>
