@@ -60,7 +60,7 @@ export const App = (): JSX.Element => {
               <Experience />
               <Stack />
               <Projects />
-              <Footer />*/}
+              <Footer /> */}
             </Box>
           </Container>
         </StyledDiv>

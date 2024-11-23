@@ -68,7 +68,7 @@ export const Projects = (): JSX.Element => {
               }
             />
             <Link
-              href="https://www.npmjs.com/package/shoe-converter"
+              href="https://www.npmjs.com/~lorenzocermeno"
               id="npm"
               src={npmLogo}
             />
