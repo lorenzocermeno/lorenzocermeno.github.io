@@ -16,6 +16,7 @@ interface CustomTabPanelProps {
   value: number;
   index: number;
 }
+
 function CustomTabPanel(props: CustomTabPanelProps) {
   const { children, value, index, ...other } = props;
 
@@ -23,8 +24,8 @@ function CustomTabPanel(props: CustomTabPanelProps) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      id={`tabpanel-${index}`}
+      aria-labelledby={`tab-${index}`}
       {...other}
     >
       {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
@@ -34,8 +35,8 @@ function CustomTabPanel(props: CustomTabPanelProps) {
 
 function a11yProps(index: any) {
   return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    id: `tab-${index}`,
+    "aria-controls": `tabpanel-${index}`,
   };
 }
 
@@ -53,7 +54,8 @@ function _Tabs() {
           value={value}
           onChange={handleChange}
           indicatorColor="secondary"
-          aria-label="basic tabs example"
+          variant="fullWidth"
+          aria-label="tabs"
         >
           <Tab label="Home" {...a11yProps(0)} sx={{ color: COLOR.PRIMARY }} />
           <Tab
