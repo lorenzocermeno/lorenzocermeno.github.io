@@ -1,10 +1,10 @@
 import { List } from "@mui/material";
-import rustLogo from "../../../assets/rust.svg";
-import typescriptLogo from "../../../assets/typescript.svg";
-import githubLogo from "../../../assets/github-dark-mode.svg";
-import npmLogo from "../../../assets/npm.svg";
+import rustLogo from "../../assets/rust.svg";
+import typescriptLogo from "../../assets/typescript.svg";
+import githubLogo from "../../assets/github-dark-mode.svg";
+import npmLogo from "../../assets/npm.svg";
 import { Project } from "./Project/Project";
-import { ImageLink } from "../../ImageLink/ImageLink";
+import { ImageLink } from "../../components/ImageLink/ImageLink";
 
 export const Projects = (): JSX.Element => {
   return (

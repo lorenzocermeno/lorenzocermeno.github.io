@@ -1,10 +1,10 @@
 import { Grid2 } from "@mui/material";
-import githubLogo from "../../../assets/github-dark-mode.svg";
-import linkedinLogo from "../../../assets/linkedin-dark-mode.svg";
-import npmLogo from "../../../assets/npm.svg";
-import paperPlane from "../../../assets/paper-plane.svg";
-import { ImageLink } from "../../ImageLink/ImageLink";
+import githubLogo from "../../assets/github-dark-mode.svg";
+import linkedinLogo from "../../assets/linkedin-dark-mode.svg";
+import npmLogo from "../../assets/npm.svg";
+import paperPlane from "../../assets/paper-plane.svg";
 import styled from "@emotion/styled";
+import { ImageLink } from "../../components/ImageLink/ImageLink";
 
 const StyledSection = styled.section`
   margin-bottom: 2em;

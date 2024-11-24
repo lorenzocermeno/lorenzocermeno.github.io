@@ -1,11 +1,11 @@
 import { ReactNode, useState } from "react";
 import Box from "@mui/material/Box";
 import { Tab, Tabs } from "@mui/material";
-import { Projects } from "../views/Projects/Projects";
-import { Contact } from "../views/Contact/Contact";
 import { COLOR } from "../../constants/constants";
 import styled from "@emotion/styled";
-import { Home } from "../views/Home/Home";
+import { Contact } from "../../views/Contact/Contact";
+import { Projects } from "../../views/Projects/Projects";
+import { Home } from "../../views/Home/Home";
 
 const StyledSection = styled.section`
   padding: 1em;
