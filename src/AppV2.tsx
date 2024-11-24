@@ -1,5 +1,29 @@
-import { Home } from "./v2/views/Home";
+import styled from "@emotion/styled";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { Tabs } from "./v2/components/Tabs/Tabs";
+import { COLOR } from "./v2/constants/constants";
+
+const StyledDiv = styled.div`
+  padding: 0em 0em 1em 0em;
+`;
 
 export const AppV2 = (): JSX.Element => {
-  return <Home />;
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: COLOR.PRIMARY,
+      },
+      secondary: {
+        main: COLOR.SECONDARY,
+      },
+    },
+  });
+
+  return (
+    <ThemeProvider theme={theme}>
+      <StyledDiv>
+        <Tabs />
+      </StyledDiv>
+    </ThemeProvider>
+  );
 };
