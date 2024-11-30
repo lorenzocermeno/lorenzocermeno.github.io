@@ -8,8 +8,12 @@ import {
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
 
-interface IProps {
+interface IProgrammingLanguage {
   imgSrc: string[];
+  alt: string[];
+}
+interface IProps {
+  imgProps: IProgrammingLanguage;
   primaryText: string;
   secondaryText?: string;
   links: ReactNode;
@@ -27,32 +31,28 @@ const StyledLinksSpan = styled.span`
 
 export const Project = (props: IProps): JSX.Element => {
   return (
-    <>
-      <ListItem>
-        <Grid2 container>
-          <Grid2
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
-          >
-            {props.imgSrc.map((i) => (
-              <ListItemIcon sx={{ marginBottom: "0.5em" }}>
-                <StyledImg src={i} alt="" />
-              </ListItemIcon>
-            ))}
-          </Grid2>
-          <Grid2>
-            <ListItemText
-              primaryTypographyProps={{ color: "primary" }}
-              secondaryTypographyProps={{ color: "secondary" }}
-              primary={props.primaryText}
-              secondary={props.secondaryText ? props.secondaryText : ""}
-            />
-          </Grid2>
+    <ListItem>
+      <Grid2 container sx={{ width: "100%" }}>
+        <Grid2 size={{ xs: 12 }}>
+          {props.imgProps.imgSrc.map((k, i) => (
+            <ListItemIcon key={i} sx={{ marginBottom: "0.5em" }}>
+              <StyledImg src={k} alt={props.imgProps.alt[i]} />
+            </ListItemIcon>
+          ))}
         </Grid2>
-      </ListItem>
-      <StyledLinksSpan>{props.links}</StyledLinksSpan>
-      <Divider sx={{ backgroundColor: "white", opacity: "30%" }} />
-    </>
+        <Grid2 size={{ xs: 12 }} marginBottom={1}>
+          <ListItemText
+            primaryTypographyProps={{ color: "primary" }}
+            secondaryTypographyProps={{ color: "secondary" }}
+            primary={props.primaryText}
+            secondary={props.secondaryText ? props.secondaryText : ""}
+          />
+        </Grid2>
+        <Grid2 size={{ xs: 12 }}>
+          <StyledLinksSpan>{props.links}</StyledLinksSpan>
+          <Divider sx={{ backgroundColor: "white", opacity: "30%" }} />
+        </Grid2>
+      </Grid2>
+    </ListItem>
   );
 };

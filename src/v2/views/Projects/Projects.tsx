@@ -10,7 +10,7 @@ export const Projects = (): JSX.Element => {
   return (
     <List>
       <Project
-        imgSrc={[rustLogo]}
+        imgProps={{ imgSrc: [rustLogo], alt: ["Rust logo"] }}
         primaryText={"POS Terminal Application"}
         secondaryText="A simple POS terminal application."
         links={
@@ -23,7 +23,7 @@ export const Projects = (): JSX.Element => {
         }
       />
       <Project
-        imgSrc={[typescriptLogo]}
+        imgProps={{ imgSrc: [typescriptLogo], alt: ["TypeScript logo"] }}
         primaryText={"Shoe (Brand) Size Converter"}
         secondaryText="Convert a shoe size across brands, genders and systems."
         links={
