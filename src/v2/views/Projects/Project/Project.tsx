@@ -25,12 +25,6 @@ const StyledLinksSpan = styled.span`
   margin-bottom: 0.5em;
 `;
 
-// const StyledListSpan = styled.span`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// `;
-
 export const Project = (props: IProps): JSX.Element => {
   return (
     <>
