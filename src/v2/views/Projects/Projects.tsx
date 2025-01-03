@@ -7,6 +7,7 @@ import springLogo from "../../assets/spring.svg";
 import reactLogo from "../../assets/react.svg";
 import javaLogo from "../../assets/java.svg";
 import ollamaLogo from "../../assets/ollama.svg";
+import langchain4jLogo from "../../assets/langchain4j.svg";
 import { Project } from "./Project/Project";
 import { ImageLink } from "../../components/ImageLink/ImageLink";
 
@@ -14,13 +15,13 @@ export const Projects = (): JSX.Element => {
   return (
     <List>
       <Project
-        imgProps={{ imgSrc: [springLogo, javaLogo, reactLogo, typescriptLogo, ollamaLogo], alt: ["Spring logo", "Java logo", "React Logo", "TypeScript logo", "Ollama logo"] }}
+        imgProps={{ imgSrc: [springLogo, javaLogo, reactLogo, typescriptLogo, langchain4jLogo, ollamaLogo], alt: ["Spring logo", "Java logo", "React Logo", "TypeScript logo", "LangChain4j Logo", "Ollama logo"] }}
         primaryText={"AI Hotel Booking Assistant"}
-        secondaryText="An application demonstrating the use of a chatbot, using LangChain4j and Ollama, to perform hotel booking operations by textually interacting with the user."
+        secondaryText="An application demonstrating the use of a chatbot to manage and perform hotel booking operations by textually interacting with the user."
         links={
           <ImageLink
             id={"Github"}
-            href={"https://github.com/lorenzocermeno/pos-terminal-app"}
+            href={"https://github.com/lorenzocermeno/booking-assistant"}
             imageSrc={githubLogo}
             width="2"
           />
