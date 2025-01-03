@@ -15,7 +15,7 @@ export const Projects = (): JSX.Element => {
     <List>
       <Project
         imgProps={{ imgSrc: [springLogo, javaLogo, reactLogo, typescriptLogo, ollamaLogo], alt: ["Spring logo", "Java logo", "React Logo", "TypeScript logo", "Ollama logo"] }}
-        primaryText={"Hotel Booking Assistant (LLM Chatbot)"}
+        primaryText={"AI Hotel Booking Assistant"}
         secondaryText="An application demonstrating the use of a chatbot, using LangChain4j and Ollama, to perform hotel booking operations by textually interacting with the user."
         links={
           <ImageLink
