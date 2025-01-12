@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
@@ -7,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const navBarStyle = css`
         display: flex;
@@ -15,20 +14,39 @@ const navBarStyle = css`
         align-items: center;
         padding: 1rem 2rem;
         color: black;
-        background-color: white;
-    `;
+  background: rgb(131, 58, 180);
+  background: -moz-linear-gradient(
+    142deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    142deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  background: linear-gradient(
+    142deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#833ab4",endColorstr="#fcb045",GradientType=1);    `;
 
 const navLeftStyle = css`
         .nav-name {
             font-size: 1.5rem;
             font-weight: bold;
+            color: white;
         }
     `;
 
 const navRightStyle = css`
     .nav-link {
         margin-left: 1rem;
-        color: black;
+        color: white;
         text-decoration: none;
         @media (max-width: 450px) {
             display: none;
@@ -67,7 +85,7 @@ const NavigationBar = (): JSX.Element => {
                         margin-left: auto;
                     `}
                 >
-                    <MenuIcon />
+                    <MenuIcon fontSize='large' sx={{ fill: "white" }} />
                 </IconButton>
                 <Drawer
                     anchor="right"
@@ -76,26 +94,28 @@ const NavigationBar = (): JSX.Element => {
                     css={css`
                         .MuiDrawer-paper {
                             width: 250px;
+                            background-color: rgba(255, 255, 255, 0.1);
+                            backdrop-filter: blur(10px);
                         }
                     `}
                 >
                     <List>
-                        <ListItem component="a" href="#about">
-                            <ListItemText primary="About" />
+                        <ListItem component="a" href="/about">
+                            <ListItemText primary="About" sx={{ color: "white" }} />
                         </ListItem>
-                        <ListItem component="a" href="#portfolio">
+                        <ListItem component="a" href="/portfolio">
                             <ListItemText primary="Portfolio" />
                         </ListItem>
-                        <ListItem component="a" href="#contact">
+                        <ListItem component="a" href="/contact">
                             <ListItemText primary="Contact" />
                         </ListItem>
                     </List>
                 </Drawer>
             </div>
             <div css={navRightStyle}>
-                <a href="#about" className="nav-link">About</a>
-                <a href="#portfolio" className="nav-link">Portfolio</a>
-                <a href="#contact" className="nav-link">Contact</a>
+                <a href="/about" className="nav-link">About</a>
+                <a href="/portfolio" className="nav-link">Portfolio</a>
+                <a href="/contact" className="nav-link">Contact</a>
             </div>
         </nav>
     );
