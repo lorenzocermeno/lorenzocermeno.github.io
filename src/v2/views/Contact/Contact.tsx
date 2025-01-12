@@ -5,6 +5,7 @@ import npmLogo from "../../assets/npm.svg";
 import paperPlane from "../../assets/paper-plane.svg";
 import styled from "@emotion/styled";
 import { ImageLink } from "../../components/ImageLink/ImageLink";
+import envelope from "../../assets/envelope.svg";
 
 const StyledSection = styled.section`
   margin-bottom: 2em;
@@ -47,7 +48,7 @@ export const Contact = () => {
           <ImageLink
             id="E-mail"
             href="mailto:lorenzocermeno@gmail.com"
-            imageSrc={paperPlane}
+            imageSrc={envelope}
             width="5"
           />
         </Grid2>

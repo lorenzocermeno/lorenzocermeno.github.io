@@ -4,7 +4,7 @@ import { Tab, Tabs } from "@mui/material";
 import { COLOR } from "../../constants/constants";
 import styled from "@emotion/styled";
 import { Contact } from "../../views/Contact/Contact";
-import { Projects } from "../../views/Projects/Projects";
+import { Portfolio } from "../../views/Portfolio/Portfolio";
 import { Home } from "../../views/Home/Home";
 
 const StyledSection = styled.section`
@@ -59,7 +59,7 @@ function _Tabs() {
         >
           <Tab label="Home" {...a11yProps(0)} sx={{ color: COLOR.PRIMARY }} />
           <Tab
-            label="Projects"
+            label="Portfolio"
             {...a11yProps(1)}
             sx={{ color: COLOR.PRIMARY }}
           />
@@ -77,7 +77,7 @@ function _Tabs() {
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <StyledSection>
-          <Projects />
+          <Portfolio />
         </StyledSection>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>

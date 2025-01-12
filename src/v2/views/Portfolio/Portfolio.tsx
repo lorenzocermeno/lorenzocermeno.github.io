@@ -1,4 +1,4 @@
-import { List } from "@mui/material";
+import { Divider, List, Typography } from "@mui/material";
 import rustLogo from "../../assets/rust.svg";
 import typescriptLogo from "../../assets/typescript.svg";
 import githubLogo from "../../assets/github-dark-mode.svg";
@@ -8,11 +8,23 @@ import reactLogo from "../../assets/react.svg";
 import javaLogo from "../../assets/java.svg";
 import ollamaLogo from "../../assets/ollama.svg";
 import langchain4jLogo from "../../assets/langchain4j.svg";
+import globeLogo from "../../assets/globe.svg";
 import { Project } from "./Project/Project";
 import { ImageLink } from "../../components/ImageLink/ImageLink";
 
-export const Projects = (): JSX.Element => {
-  return (
+export const Portfolio = (): JSX.Element => {
+
+  const heading = (text: string) => {
+    return (<><Typography variant="h2" color="white" marginLeft={2}>{text}</Typography >
+      <Divider sx={{
+        backgroundImage: "linear-gradient(to right, rgba(171, 71, 188, 1), rgba(171, 71, 188, 0))",
+        height: "2px",
+        border: "none",
+        marginLeft: "1em",
+      }} /></>)
+  };
+  return (<>
+    {heading("Projects")}
     <List>
       <Project
         imgProps={{ imgSrc: [springLogo, javaLogo, reactLogo, typescriptLogo, langchain4jLogo, ollamaLogo], alt: ["Spring logo", "Java logo", "React Logo", "TypeScript logo", "LangChain4j Logo", "Ollama logo"] }}
@@ -61,6 +73,22 @@ export const Projects = (): JSX.Element => {
           </>
         }
       />
-    </List>
+    </List >
+    {heading("Publications")}
+    < List >
+      <Project
+        primaryText={"Digital Transformation Success Through Aligning the Organizational Structure: Case Study of Swedish Public Organizations"}
+        secondaryText="AMCIS 2022 Proceedings. 10"
+        links={
+          <ImageLink
+            id={"Globe"}
+            href={"https://aisel.aisnet.org/amcis2022/scudt/scuidt/10/"}
+            imageSrc={globeLogo}
+            width="2"
+          />
+        }
+      />
+    </List >
+  </>
   );
 };

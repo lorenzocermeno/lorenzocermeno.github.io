@@ -13,7 +13,7 @@ interface IProgrammingLanguage {
   alt: string[];
 }
 interface IProps {
-  imgProps: IProgrammingLanguage;
+  imgProps?: IProgrammingLanguage;
   primaryText: string;
   secondaryText?: string;
   links: ReactNode;
@@ -34,9 +34,9 @@ export const Project = (props: IProps): JSX.Element => {
     <ListItem>
       <Grid2 container sx={{ width: "100%" }}>
         <Grid2 size={{ xs: 12 }}>
-          {props.imgProps.imgSrc.map((k, i) => (
+          {props.imgProps?.imgSrc.map((k, i) => (
             <ListItemIcon key={i} sx={{ marginBottom: "0.5em" }}>
-              <StyledImg src={k} alt={props.imgProps.alt[i]} />
+              <StyledImg src={k} alt={props.imgProps?.alt[i]} />
             </ListItemIcon>
           ))}
         </Grid2>
