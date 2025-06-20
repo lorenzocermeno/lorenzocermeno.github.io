@@ -2,7 +2,7 @@ import * as React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { AppV2 } from "./AppV2";
+import {App} from "./v4/App";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <AppV2 />
+    <App />
   </React.StrictMode>
 );
 
