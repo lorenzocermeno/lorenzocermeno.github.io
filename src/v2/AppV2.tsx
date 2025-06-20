@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Tabs } from "./v2/components/Tabs/Tabs";
-import { COLOR } from "./v2/constants/constants";
+import { Tabs } from "./components/Tabs/Tabs";
+import { COLOR } from "./constants/constants";
 
 const StyledDiv = styled.div`
   padding: 0em 0em 1em 0em;

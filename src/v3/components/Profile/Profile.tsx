@@ -1,22 +1,22 @@
 import { Grid2, Typography } from "@mui/material";
-import profilePicture from "../../assets/profile.jpg";
-import linkedinLogo from "../../assets/linkedin-logo.svg";
 import githubLogo from "../../assets/github-logo.svg";
-import { ImageLink } from "../ImageLink/ImageLink";
 import profilePicture2 from "../../assets/IMG_3480.jpg";
+import linkedinLogo from "../../assets/linkedin-logo.svg";
+import { ImageLink } from "../ImageLink/ImageLink";
 
 export const Profile = (): JSX.Element => {
     return (
         <Grid2 container spacing={1} padding={4}>
             <Grid2
-                size={{ sm: 6 }}
+                size={{ xs: 12, sm: 6 }}
                 display={"flex"}
                 justifyContent={"center"}
             >
-                <img src={profilePicture2} alt="profile" style={{ borderRadius: "50%", width: "60%", height: "auto", objectFit: "cover" }} />
+                <img src={profilePicture2} alt="Head shot" style={{ borderRadius: "50%", maxWidth: "20em", height: "auto", objectFit: "cover" }} />
             </Grid2>
             <Grid2
                 size={{ sm: 6 }}
+                width={{ xs: "100%", sm: "auto" }}
                 display={"flex"}
                 flexDirection={"column"}
                 justifyContent={"center"}

@@ -1,8 +1,8 @@
-import {Card, CardActions, CardContent, Chip, Grid2, Stack, Typography} from "@mui/material";
-import React, {ReactNode} from "react";
+import { Card, CardActions, CardContent, Chip, Grid2, Stack, Typography } from "@mui/material";
+import React, { ReactNode } from "react";
 
 interface IChip {
-    image: React.ReactElement;
+    image?: React.ReactElement;
     text: string;
 }
 
@@ -22,11 +22,11 @@ export const PortfolioCard = (props: IProps): JSX.Element => {
             display: 'flex',
             flexDirection: 'column'
         }}>
-            <CardContent sx={{minHeight: 175}}>
+            <CardContent>
                 <Typography gutterBottom variant="h4" color="white" textAlign={"center"}>
                     {props.title}
                 </Typography>
-                <Typography variant="body2" sx={{color: "white"}}>
+                <Typography variant="body2" sx={{ color: "white" }}>
                     {props.description}
                 </Typography>
             </CardContent>
@@ -38,17 +38,16 @@ export const PortfolioCard = (props: IProps): JSX.Element => {
                 width: '100%'
             }}>
                 <Grid2 container spacing={1} alignItems="flex-end">
-                    <Grid2 size={{xs: 12}}>
+                    <Grid2 size={{ xs: 12 }} marginBottom={props.repoLinks ? 2 : 0}>
                         {props.chip &&
                             <Stack direction="column" spacing={1} display={"flex"} justifyContent={"center"}>
                                 {props.chip.map((chip, index) => (
-                                    <Chip key={index} icon={chip.image}
-                                          label={<Typography color="white">{chip.text}</Typography>}/>))}
+                                    <Chip key={index} icon={chip?.image}
+                                        label={<Typography color="white">{chip.text}</Typography>} />))}
                             </Stack>}
                     </Grid2>
-
                     {props.repoLinks &&
-                        <Grid2 size={{xs: 12}} marginBottom={1} display={"flex"} justifyContent={"space-evenly"}>
+                        <Grid2 size={{ xs: 12 }} marginBottom={1} display={"flex"} justifyContent={"space-evenly"}>
                             {props.repoLinks}
                         </Grid2>}
                 </Grid2>
