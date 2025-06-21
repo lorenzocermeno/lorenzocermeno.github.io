@@ -6,7 +6,7 @@ interface IProps {
 
 export const GridTabContentWrapper = (props: IProps): JSX.Element => {
   return (
-    <Grid2 container marginBottom={2} paddingX={2} width="100%">
+    <Grid2 container marginBottom={2} paddingX={2}>
       {props.children}
     </Grid2>
   );

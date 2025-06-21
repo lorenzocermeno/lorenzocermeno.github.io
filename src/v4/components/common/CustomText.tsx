@@ -3,6 +3,7 @@ import { Link, Typography } from "@mui/material";
 interface IProps {
   text: string;
   fontSize?: number;
+  heading?: boolean;
   link?: {
     url: string;
   };
@@ -29,7 +30,7 @@ export const CustomText = (props: IProps): JSX.Element => {
             py: 0.5,
             borderRadius: "4px",
             "&:hover": {
-              backgroundColor: "#1e13ba",
+              backgroundColor: "#e8df3a",
               color: "#fff",
             },
           }}>
@@ -39,7 +40,14 @@ export const CustomText = (props: IProps): JSX.Element => {
         <Typography
           fontSize={fontSize}
           fontFamily='"Press Start 2P", cursive'
-          color={props.color || "#fff"}>
+          color={props.color || "#fff"}
+          
+          sx={{
+            ...(props.heading && {
+              borderRadius: "4px",
+              backgroundColor: "#1e13ba",
+            }),
+          }}>
           {props.text}
         </Typography>
       )}
