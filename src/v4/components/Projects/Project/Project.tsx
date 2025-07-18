@@ -3,7 +3,7 @@ import { Grid2 } from "@mui/material";
 import { CustomText } from "../../common/CustomText";
 
 const StyledDiv = styled.div`
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   width: 100%;
 `;
 
@@ -23,13 +23,16 @@ export const Project = (props: IProps): JSX.Element => {
 
   return (
     <StyledDiv>
-      <Grid2
-        size={{ xs: 12 }}
-        marginBottom={2}
-        display="flex"
-        justifyContent="center">
-        <CustomText text={props.heading} fontSize={14} heading />
-      </Grid2>
+    <Grid2
+      size={{ xs: 12 }}
+      marginBottom={2}
+      display="flex"
+      justifyContent="center"
+      role="heading"
+      aria-level={2}
+    >
+      <CustomText text={props.heading} fontSize={14} heading />
+    </Grid2>
       <Grid2 size={{ xs: 12 }} marginBottom={2}>
         <CustomText text={props.description} fontSize={12} />
       </Grid2>

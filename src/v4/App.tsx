@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { About } from "./components/About/About";
-import { Contact } from "./components/Contact/Contact";
+import { ContactDetails } from "./components/ContactDetails/ContactDetails";
 import { Projects } from "./components/Projects/Projects";
 import { CustomText } from "./components/common/CustomText";
 
@@ -44,7 +44,7 @@ export const App = (): JSX.Element => {
       <div style={{ minHeight: 60, textAlign: "center" }}>
         {activeTab === 0 && <About />}
         {activeTab === 1 && <Projects />}
-        {activeTab === 2 && <Contact />}
+        {activeTab === 2 && <ContactDetails />}
       </div>
     </div>
   );

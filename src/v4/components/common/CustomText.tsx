@@ -41,7 +41,6 @@ export const CustomText = (props: IProps): JSX.Element => {
           fontSize={fontSize}
           fontFamily='"Press Start 2P", cursive'
           color={props.color || "#fff"}
-          
           sx={{
             ...(props.heading && {
               borderRadius: "4px",
