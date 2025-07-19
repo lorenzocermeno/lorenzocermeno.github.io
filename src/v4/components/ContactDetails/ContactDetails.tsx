@@ -10,7 +10,7 @@ export const ContactDetails = (): JSX.Element => {
         href="https://www.linkedin.com/in/lorenzo-cermeno"
       />
       <Contact
-        heading="Github"
+        heading="GitHub"
         linkText="lorenzocermeno"
         href="https://github.com/lorenzocermeno"
       />

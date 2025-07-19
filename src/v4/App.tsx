@@ -22,7 +22,7 @@ export const App = (): JSX.Element => {
                     onClick={() => setActiveTab(idx)}
                     style={{
                       flex: 1,
-                      background: activeTab === idx ? "#1e13ba" : "#212124",
+                      background: activeTab === idx ? "#1e13ba" : "#1c1c1fff",
                       color: "#fff",
                       border: "none",
                       borderBottom:

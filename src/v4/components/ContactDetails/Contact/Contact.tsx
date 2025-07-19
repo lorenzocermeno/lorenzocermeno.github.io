@@ -19,7 +19,7 @@ export const Contact = (props: IProps): JSX.Element => {
         aria-level={2}>
         <CustomText text={props.heading} fontSize={14} color="#fff" heading />
       </Grid2>
-      <Grid2 size={{ xs: 12 }} marginBottom={2}>
+      <Grid2 size={{ xs: 12 }} marginBottom={4}>
         <CustomText
           text={props.linkText}
           fontSize={12}
