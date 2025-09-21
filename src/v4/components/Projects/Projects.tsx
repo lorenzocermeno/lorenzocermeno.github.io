@@ -14,7 +14,7 @@ export const Projects = (): JSX.Element => {
                 links={[
                     {
                         name: "Github",
-                        url: "https://github.com/lorenzocermeno/booking-assistant",
+                        url: "https://github.com/lorenzocermeno/ai-booking-assistant",
                     },
                 ]}
             />
