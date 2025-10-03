@@ -15,7 +15,7 @@ interface ILink {
 interface IProps {
     heading: string;
     description: string;
-    links?: ILink[]; // TODO: Remove optional when publishing Kafka project
+    links: ILink[];
 }
 
 export const Project = (props: IProps): JSX.Element => {

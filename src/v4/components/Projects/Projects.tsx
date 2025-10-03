@@ -5,8 +5,14 @@ export const Projects = (): JSX.Element => {
     return (
         <GridTabContentWrapper>
             <Project
-                heading="Parking Manager"
+                heading="Smart Parking"
                 description="Managing parking spots by using a Dockerized event driven architecture with Kafka."
+                links={[
+                    {
+                        name: "Github",
+                        url: "https://github.com/lorenzocermeno/smart-parking",
+                    },
+                ]}
             />
             <Project
                 heading="AI Hotel Booking Assistant"
